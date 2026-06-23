@@ -18,8 +18,8 @@ Praktické laby ke školení **Hacking & Bezpečnost webových aplikací**.
 
 | Lab | Téma | Složka |
 |-----|------|--------|
-| Lab 01 | OSINT & GitHub Secrets | `lab-01-osint/` |
-| Lab 02 | Síťová analýza — Nmap & Wireshark | `lab-02-network/` |
+| Lab 01 | OSINT & GitHub Secrets | `lab_01_osint/` |
+| Lab 02 | Síťová analýza — Nmap & Wireshark | `lab_02_network/` |
 
 ---
 
