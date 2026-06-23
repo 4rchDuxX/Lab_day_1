@@ -14,7 +14,7 @@
 DNSDumpster je legální veřejná služba. Dívá se na veřejné DNS záznamy — žádný přímý kontakt s cílem.
 
 1. Otevři **https://dnsdumpster.com**
-2. Do vyhledávacího pole zadej: `testphp.vulnweb.com`
+2. Do vyhledávacího pole zadej: `seznam.cz`
 3. Klikni na **Search**
 
 **Co hledat ve výsledcích:**
@@ -34,8 +34,8 @@ DNSDumpster je legální veřejná služba. Dívá se na veřejné DNS záznamy 
 
 Shodan indexuje celý internet a ukládá informace o otevřených portech a službách.
 
-1. Zaregistruj se zdarma na **https://shodan.io** (nebo použij účet cvičitele)
-2. Do vyhledávání zadej IP adresu cíle: `45.33.32.156` (to je scanme.nmap.org — legální cíl)
+1. Zaregistruj se zdarma na **https://shodan.io** 
+2. Do vyhledávání zadej IP adresu cíle: `45.33.32.156` (scanme.nmap.org — legální cíl)
 3. Prozkoumej výsledky
 
 **Co vidíš bez jediného vlastního skenu:**
@@ -75,11 +75,11 @@ filetype:env "APP_KEY" site:github.com
 
 ## ČÁST B — TruffleHog (terminál v Codespace)
 
-Tohle spusť v terminálu v Codespace (dole v VS Code).
+Tohle spusť v terminálu v Codespace
 
 ### Krok 4 — Skenování demo repa s fake secrets
 
-TruffleHog prohledá celou Git historii a najde secrets i v dávno smazaných commitech.
+TruffleHog prohledá celou Git historii a najde secrets i ve smazaných commitech.
 
 ```bash
 trufflehog git https://github.com/trufflesecurity/test_keys --only-verified
@@ -97,7 +97,7 @@ Počkej ~30 sekund. TruffleHog projde celou historii commitů.
 
 ### Krok 5 — Proč nestačí klíč smazat
 
-Teď uděláme experiment. Podíváme se na historii commitů a najdeme klíč i když byl "smazán":
+Podíváme se na historii commitů a najdeme klíč i když byl smazán:
 
 ```bash
 # Naklonuj repo
@@ -111,7 +111,7 @@ git log --oneline
 git show <HASH_COMMITU>
 ```
 
-Vidíš? Klíč je tam navždy — dokud nepřepíšeš celou Git historii pomocí `git filter-repo`.
+Klíč je tam navždy — dokud nepřepíšeš celou Git historii pomocí `git filter-repo`.
 
 ---
 
@@ -131,7 +131,7 @@ trufflehog github --org=NAZEV_ORG
 
 ---
 
-## ✅ Shrnutí — co jsme se naučili
+## ✅ Shrnutí
 
 | Technika | Nástroj | Co prozradí |
 |----------|---------|-------------|
@@ -140,11 +140,11 @@ trufflehog github --org=NAZEV_ORG
 | Indexované soubory | Google Dorks | .env soubory, zálohy DB, odkryté adresáře |
 | Git secrets | TruffleHog | API klíče, hesla, tokeny v historii commitů |
 
-**Klíčový takeaway:** Útočník toto celé udělá ještě před prvním paketem. Obrana začíná tím, že víš co o sobě vystavuješ.
+**Klíčový takeaway:** Útočník toto celé udělá ještě před prvním paketem. Obrana začíná tím, že víš co o sobě vystavuješ - threat intell
 
 ---
 
-## Prevence — co dělat jako vývojář
+## Prevence
 
 ```bash
 # Přidej do .gitignore
