@@ -1,0 +1,6 @@
+{
+  "name": "AppSec Training Lab",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "sudo apt-get update -q && sudo apt-get install -y -q nmap tshark curl wget && curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sudo sh -s -- -b /usr/local/bin && wget -q https://wiki.wireshark.org/uploads/27707187aeb30df68e70c8fb9d614981/http.cap -O lab-02-network/http.cap",
+  "remoteUser": "vscode"
+}
