@@ -3,7 +3,7 @@ set -e
 
 echo "[1/3] Instaluji system balicky..."
 sudo apt-get update -q
-sudo apt-get install -y -q nmap tshark curl wget
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -q nmap tshark curl wget
 
 echo "[2/3] Instaluji TruffleHog..."
 curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sudo sh -s -- -b /usr/local/bin
